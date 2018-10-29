@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/noticias2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Confira 5 vantagens de cursar uma pós-graduação</h2>
+        <p class="text1"> Autor: Rogério Ramalho 10/09/2018</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <p>Embora uma graduação seja suficiente para conseguir um bom emprego, hoje o profissional precisa
+                    considerar as vantagens da pós-graduação, caso queira continuar evoluindo em sua carreira no mercado
+                    de
+                    trabalho.</p>
+                <p>No mundo atual, cada vez mais competitivo, mutável e exigente, os benefícios de um diploma de
+                    especialização ajudam o estudante a se diferenciar entre a maioria e continuar sendo um empregado
+                    valioso para uma organização.</p>
+                <h2>As vantagens da pós-graduação</h2>
+                <p>De maneira geral, uma pós-graduação é tudo que vem depois de uma, seja uma especialização, um
+                    mestrado ou
+                    doutorado. Ela pode ser dividida em cursos lato sensu e stricto sensu.</p>
+                <p>O lato sensu consiste em uma especialização que aperfeiçoa o estudante em uma área específica da
+                    profissão escolhida, principalmente, para aqueles que querem focar sua atuação profissional numa
+                    área
+                    bem exclusiva e que garantirá um diferencial no mercado de trabalho.</p>
+                <p>Já o stricto sensu é mais voltado para aqueles que desejam uma carreira de pesquisador ou professor
+                    universitário, por meio de um mestrado ou doutorado.</p>
+                <p>Os cursos lato sensu são mais breves que os stricto sensu, em torno de 6 a 18 meses. Eles são
+                    desenhados
+                    para serem mais curtos, com as aulas ocorrendo à noite, durante alguns dias úteis ou apenas aos fins
+                    de
+                    semana. Dessa forma, eles são os mais indicados para quem já está empregado e não tem muito tempo
+                    disponível para os estudos.</p>
+                <p>Diante do exposto, deseja se destacar no mercado de trabalho</a>? Abaixo, estão as 5 vantagens de
+                    cursar
+                    uma pós-graduação e que podem ajudá-lo em sua carreira profissional. Acompanhe!</p>
+                <h3>1. Permite aprofundar os conhecimentos</h3>
+                <p>Fazer uma ajuda o trabalhador a conquistar um conhecimento especializado na área que decidiu atuar.
+                    Ter
+                    um diploma desses é uma evidência de persistência, determinação, proeza intelectual e capacidade de
+                    lidar com ambientes desafiadores.</p>
+                <p>Com o mercado de trabalho evoluindo constantemente, ter uma especialização mostra para os gestores de
+                    uma
+                    empresa que o empregado se dedica para aprimorar a sua expertise, o que lhe dá uma certa
+                    credibilidade.</p>
+                <p>Uma pós também pode ajudar a pessoa a desenvolver ainda mais as suas, ganhando novas competências
+                    para o
+                    seu repertório ou mesmo descobrindo um campo totalmente novo, criando um paradigma em sua
+                    carreira.</p>
+                <p>Existem centenas de opções de cursos, abrindo inúmeras oportunidades para conquistar o sucesso.</p>
+                <h3>2. Qualifica o profissional para o mercado de trabalho</h3>
+                <p>Muitas organizações não só reconhecem os benefícios de uma pós-graduação, como também preferem que
+                    seus
+                    funcionários tenham uma. Esse tipo de formação ajuda a melhorar a capacidade de pesquisa, escrita e
+                    análise. Como resultado, o aluno se torna um bom solucionador de problemas, administrando projetos
+                    complexos com mais facilidade e desenvoltura — o que é bem visto pelas empresas.</p>
+                <p>Para aqueles estudantes que acabaram de concluir uma graduação, a possibilidade de fazer uma pós é
+                    uma
+                    oportunidade para acelerar a sua carreira profissional, seja por meio de uma ou em um trabalho fixo.
+                    Gastar mais dinheiro para conseguir um diploma avançado trará vários privilégios no futuro próximo,
+                    justificando tal investimento.</p>
+                <p>No caso dos trabalhadores mais velhos e formalmente empregados, a pós-graduação surge como uma
+                    expectativa de melhores salários e o poder de barganha para conquistar novas posições em potenciais
+                    promoções ou em entrevistas de emprego. Uma especialização será o que faltava para o funcionário
+                    trabalhar em cargos mais altos, como gerenciamento e liderança, por exemplo.</p>
+                <h3>3. Ajuda a valorizar o currículo</h3>
+                <p>As pessoas sempre aprendem ao longo da vida. O desenvolvimento pessoal é algo inerente ao ser humano.
+                    É
+                    gratificante para muitas delas o desejo de aprender, desafiar-se a algo novo e experimentar coisas
+                    novas. Para esses indivíduos, uma educação superior oferece a oportunidade de fazer tudo isso de
+                    forma
+                    estruturada.</p>
+                <p>Poder ostentar isso no currículo é um motivo de grande satisfação pessoal. Na maioria dos casos,
+                    alguém
+                    que tem um diploma avançado é percebido como mais experiente e que possui credibilidade. Embora a
+                    conclusão de uma pós-graduação não seja uma garantia de sucesso profissional, certamente abre mais
+                    portas para o emprego.</p>
+                <p>Entre um graduando e um pós-graduando, provavelmente, o último será escolhido para uma vaga
+                    concorrida. O
+                    esforço utilizado para concluir os estudos, apesar dos momentos de dúvidas e incertezas, será
+                    recompensado no médio e longo prazo.</p>
+                <h3>4. Amplia a rede de contatos</h3>
+                <p>Um estudante de pós-graduação estará ao lado de vários profissionais, de diferentes origens,
+                    trabalhando
+                    em negócios distintos e muitos dos quais são bem-sucedidos em suas áreas de atuação.</p>
+                <p>Dessa forma, a partir do momento que o aluno pisa numa sala de aula, terá a sua disposição uma ampla
+                    rede
+                    de contatos que ajudam no seu, seja compartilhando aprendizados, fazendo indicações ou mesmo
+                    convites
+                    para vagas de emprego.</p>
+                <p>Além disso, a rede ajuda a construir relacionamentos com profissionais de diferentes áreas, obter
+                    novas
+                    perspectivas sobre o mercado de trabalho e desenvolver valiosas habilidades interpessoais. Reunir
+                    pessoas bem-sucedidas em sua bolha de contatos também inspira a trabalhar mais, sair de sua zona de
+                    conforto e pensar de maneira mais criativa.</p>
+                <h3>5. Possibilita que o profissional aumente seu salário e suba de cargo na empresa</h3>
+                <p>Segundo dados</a> da Organização para Cooperação e Desenvolvimento Econômico (OCDE), apenas 14% dos
+                    adultos brasileiros tem acesso ao ensino superior. O índice é considerado baixo em relação à média
+                    dos
+                    outros países da OCDE e demonstra a demanda pelas empresas por profissionais mais qualificados em
+                    suas
+                    profissões.</p>
+                <p>Estima-se que um profissional formado no ensino superior ganha mais que o dobro daquele que tem
+                    apenas o
+                    diploma no ensino médio. Já alguém que faz a pós-graduação pode ganhar até 4 vezes mais de quem só
+                    concluiu o colegial.</p>
+                <p>Dessa forma, quem ostenta um título de pós-graduado tem seu currículo valorizado e com mais chances
+                    de
+                    conseguir um bom salário ou mesmo conquistar uma melhor posição dentro da hierarquia de uma
+                    empresa.</p>
+                <p>Um funcionário que vislumbrou as vantagens da pós-graduação e conseguiu demonstrar sucesso em uma
+                    situação de longo prazo, que exige resistência, disciplina, liderança e a capacidade de trabalhar
+                    bem
+                    com os outros, estará na lista de promoções para crescer dentro de uma organização.</p>
+                <p>E você, ficou interessado em fazer um curso lato sensu? Sabe a diferença entre uma especialização ou
+                    MBA?
+                    Dê uma olhada em sobre esse assunto.</p>
+            </div>
+        </section>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

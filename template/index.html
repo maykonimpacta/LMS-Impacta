@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="BT4" href="{% url 'professores' %}">Professores</a></li>
+                        <li><a class="BT5" href="{% url 'notas' %}">Notas/Faltas</a></li>
+                        <li><a class="BT6" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                        <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                        <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Lista de cursos</h2>
+        <p class="text">Conheça um pouco sobre nossos cursos</p>
+        <section class="diferencial"> <!-- section differencial cards -->
+            <div class="box div1">
+                <span class="icon img1"></span>
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p>Análise e Desenvolvimento de Sistemas. Entender as necessidades das empresas é fundamental para
+                    fazê-las
+                    crescer e gerar bons resultados...</p>
+                <a class="link-saiba-mais" href="{% url 'curso_ads' %}">Saiba +</a>
+            </div>
+
+            <div class="box div2">
+                <span class="icon img2"></span>
+                <h3>Produção Multimídia</h3>
+                <p>O curso de Produção Multimídia é voltado para os setores criativos, oferecendo ensino de
+                    qualidade...</p>
+                <a class="link-saiba-mais" href="{% url 'curso_prodmidia' %}">Saiba +</a>
+            </div>
+            <div class="box div3">
+                <span class="icon img3"></span>
+                <h3>Sistemas de Informação</h3>
+                <p>A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do
+                    mercado...</p>
+                <a class="link-saiba-mais" href="{% url 'curso_si' %}">Saiba +</a>
+            </div>
+            <div class="box div4">
+                <span class="icon img4"></span>
+                <h3>Banco de Dados</h3>
+                <p>O curso de Banco de Dados prepara o aluno para ser um profissional versátil e com habilidades para
+                    atuar
+                    com diversas plataformas...</p>
+                <a class="link-saiba-mais" href="{% url 'curso_bd' %}">Saiba +</a>
+            </div>
+            <div class="box div5">
+                <span class="icon img5"></span>
+                <h3>Gestão da Tecnologia da Informação</h3>
+                <p>A graduação em Gestão da Tecnologia da Informação prepara você para a liderança em TI...</p>
+                <a class="link-saiba-mais" href="{% url 'curso_gestti' %}">Saiba +</a>
+            </div>
+        </section>
+        <h1>Sobre nós</h1>
+        <section class="services1"> <!-- section services -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <p class="sobre"><span>A</span> FMJ Fundada em 2018, a Faculdade FMJ é considerada uma das instituições
+                    com
+                    maior potêncial em formação de aunas na área de tecnologia, devido ao seu intenso compromisso com a
+                    educação e à transformação da sociedade através da tecnologia.
+                    Referência nas áreas de TI, Gestão e Design, a FMJ conta com cursos de Graduação, Pós-Graduação,
+                    Extensão, MBA e cursos técnicos que preparam seus alunos para os desafios do mercado de trabalho,
+                    além
+                    de um time de mestres e doutores com larga experiência profissional.
+                    O alto nível de empregabilidade é uma das principais características da Faculdade FMJ, que é
+                    reconhecida
+                    pelas maiores empresas do País, em que seus alunos garantem posições de destaque no mercado de
+                    trabalho
+                    após o término do curso.</p>
+            </div>
+        </section>
+        <section class="services2">
+            <div class="apps">
+                <h3>Missão</h3>
+                <p>A Faculdade FMJ de Tecnologia tem como missão disseminar o conhecimento no País e contribuir para a
+                    construção de uma sociedade mais igualitária através das novas tecnologias aliadas à educação.</p>
+            </div>
+            <div class="imagem02"></div>
+        </section>
+        <section class="services1"> <!-- section services -->
+            <div class="imagem03"></div>
+            <div class="software">
+                <h3>Visão</h3>
+                <p>Ser o melhor em educação, conhecimento, capacitação e inovação com liderança, presença e referência
+                    mundial.</p>
+            </div>
+        </section>
+        <section class="services2">
+            <div class="apps">
+                <h3>Valores</h3>
+                <p>Encantar o cliente
+                    Paixão pela excelência e alta performance
+                    Busca de níveis superiores de inovação e conhecimento
+                    Iniciativa e trabalho em equipe com colaboradores comprometidos e criativos
+                    Crescimento com rentabilidade e resultados que superem expectativas
+                    Empreendedorismo com ética e integridade</p>
+            </div>
+            <div class="imagem04"></div>
+        </section>
+        <div><br/><br/><br/></div>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/diciplina3.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Banco de Dados</h2>
+        <p class="text1"> Data Analytics & Big Data</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <h2>SOBRE O CURSO</h2>
+                <p>O curso de Banco de Dados prepara o aluno para ser um profissional versátil e com habilidades para
+                    atuar
+                    com diversas plataformas e estruturas de desenvolvimento e administração de sistemas de Banco de
+                    Dados,
+                    com acesso a todo o repertório técnico e teórico da área.</p>
+                <p>A graduação mostra a importância da segurança de compartilhamento de dados nas empresas modernas e
+                    ensina
+                    as melhores técnicas e ferramentas de criação e implementação da mesma.</p>
+                <p>Na Impacta, você será preparado para o cenário real de gestão e liderança empresarial, garantindo a
+                    capacidade de comunicação e criatividade para solucionar problemas, atingir os melhores resultados,
+                    aumentar a produtividade e reduzir custos.</p>
+                <a href="{% url 'diciplina_bd' %}">
+                    <button>Conheça as diciplinas</button>
+                </a>
+            </div>
+        </section>
+        <br/>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

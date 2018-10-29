@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/diciplina.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Análise e Desenvolvimento de Sistemas</h2>
+        <p class="text1"> IoT, DevOps & Mobile</p>
+
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <h2>SOBRE O CURSO</h2>
+                <p>Entender as necessidades das empresas é fundamental para fazê-las crescer e gerar bons resultados.
+                    Desta
+                    maneira, um dos caminhos para alavancar os negócios e se destacar no mercado de trabalho é o da
+                    Tecnologia. Para isso, a Faculdade Impacta oferece a graduação em Análise e Desenvolvimento de
+                    Sistemas,
+                    que prepara você para atuar em todas as etapas de projetos de tecnologia da informação - concepção,
+                    gerência e manutenção, aplicação e mensuração de resultados.</p>
+                <p>O curso é voltado para a criação de programas, softwares e sistemas para as empresas. As etapas do
+                    projeto de sistemas de software, como análise, projeto, teste, gestão, implantação e manutenção de
+                    sistemas de informação também estão entre os aprendizados da graduação.</p>
+                <br>
+                <a href="{% url 'diciplina_ads' %}">
+                    <button>Conheça as diciplinas</button>
+                </a>
+            </div>
+        </section>
+        <br/>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

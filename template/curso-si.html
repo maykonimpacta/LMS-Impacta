@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/diciplina2.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Sistemas de Informação</h2>
+        <p class="text1"> Business Agility & Computação Cognitiva</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+
+            <div class="software">
+                <h2>SOBRE O CURSO</h2>
+                <p>A Graduação de Sistemas de Informação prepara o aluno para ser um profissional transformador do
+                    mercado,
+                    desenvolvendo soluções inovadoras e criativas na construção e utilização de Sistemas de
+                    Informação.</p>
+                <p>O aluno aprenderá os conceitos teóricos e usos práticos da área, irá acompanhar as principais
+                    inovações
+                    tecnológicas do mercado e habilitar a sua capacidade empreendedora.</p>
+                <p>O objetivo é formar profissionais capazes de atuar na área de Tecnologia da Informação, criando
+                    práticas
+                    tecnológicas para determinar o fluxo de informações com o desenvolvimento de software e no
+                    gerenciamento
+                    de sistemas informatizados. Ao final do 2.º ano, os alunos já terão o diploma de Tecnólogo em
+                    Análise e
+                    Desenvolvimento de Sistemas.</p>
+                <a href="{% url 'diciplina_si' %}">
+                    <button>Conheça as diciplinas</button>
+                </a>
+            </div>
+        </section>
+        <br/>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

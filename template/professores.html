@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login_style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/professor.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="{% static 'css/bootstrap4_1_1.css' %}" rel="stylesheet" id="bootstrap-css">
+    </head>
+    <body>
+    <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+    <header class="navigation"> <!-- top navigation -->
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT4" href="{% url 'professores' %}">Professores</a></li>
+                    <li><a class="BT5" href="{% url 'notas' %}">Notas/Faltas</a></li>
+                    <li><a class="BT6" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                {% else %}
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        </br>
+        <div class="logo"></div>
+    </header>
+    </br>
+    <h2>Professores</h2>
+    <div class="container mb-5 mt-5">
+        <div class="pricing card-deck flex-column flex-md-row mb-3">
+            <div class="card card-pricing text-center px-3 mb-4">
+                <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Máteria</span>
+                <div class="bg-transparent card-header pt-4 border-0">
+                    <span class="h6 font-weight-normal text-primary text-center">Nome Professor</span>
+                </div>
+                <div class="card-body pt-0">
+                    <ul class="list-unstyled mb-4">
+                        <li><img src="{% static 'images/professor.png' %}" class="imagem-professor" alt="Avatar"></li>
+                        <li>email@email.com</li>
+                        <li>Telefone: 11 9999 9999</li>
+                        <li>Pequena descrição</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn btn-primary mb-3">Verificar Notas</a>
+                </div>
+            </div>
+            <div class="card card-pricing text-center px-3 mb-4">
+                <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Máteria</span>
+                <div class="bg-transparent card-header pt-4 border-0">
+                    <span class="h6 font-weight-normal text-primary text-center">Nome Professor</span>
+                </div>
+                <div class="card-body pt-0">
+                    <ul class="list-unstyled mb-4">
+                        <li><img src="{% static 'images/professor.png' %}" class="imagem-professor" alt="Avatar"></li>
+                        <li>email@email.com</li>
+                        <li>Telefone: 11 9999 9999</li>
+                        <li>Pequena descrição</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn btn-primary mb-3">Verificar Notas</a>
+                </div>
+            </div>
+            <div class="card card-pricing text-center px-3 mb-4">
+                <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Máteria</span>
+                <div class="bg-transparent card-header pt-4 border-0">
+                    <span class="h6 font-weight-normal text-primary text-center">Nome Professor</span>
+                </div>
+                <div class="card-body pt-0">
+                    <ul class="list-unstyled mb-4">
+                        <li><img src="{% static 'images/professor.png' %}" class="imagem-professor" alt="Avatar"></li>
+                        <li>email@email.com</li>
+                        <li>Telefone: 11 9999 9999</li>
+                        <li>Pequena descrição</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn btn-primary mb-3">Verificar Notas</a>
+                </div>
+            </div>
+            <div class="card card-pricing text-center px-3 mb-4">
+                <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Máteria</span>
+                <div class="bg-transparent card-header pt-4 border-0">
+                    <span class="h6 font-weight-normal text-primary text-center">Nome Professor</span>
+                </div>
+                <div class="card-body pt-0">
+                    <ul class="list-unstyled mb-4">
+                        <li><img src="{% static 'images/professor.png' %}" class="imagem-professor" alt="Avatar"></li>
+                        <li>email@email.com</li>
+                        <li>Telefone: 11 9999 9999</li>
+                        <li>Pequena descrição</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn btn-primary mb-3">Verificar Notas</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </body>
+
+
+{% endblock %}

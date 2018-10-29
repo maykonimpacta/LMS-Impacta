@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/noticias1.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Marketing Digital</h2>
+        <p class="text1"> Autor: Rogério Ramalho 17/09/2018</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <p>Muitas vezes está tudo indo bem na sua carreira profissional, mas ainda falta um pontapé final
+                    para alavancá-la de vez. Para isso, é preciso se especializar em alguns temas e se dedicar a algumas
+                    áreas, muitas vezes até então impensadas, para se conseguir um cargo reconhecido e obter um salário
+                    melhor. Uma opção interessante é fazer um <a
+                            href="https://www.impacta.edu.br/mba/mba-em-marketing-digital" target="_blank"
+                            rel="noopener">curso
+                        de marketing digital</a>.</p>
+                <p>Antes de qualquer coisa, é importante entender o que é o . Ele é um conjunto de atividades executadas
+                    de
+                    forma online para atrair negócios e desenvolver empresas.</p>
+                <p>Usando canais como blogs, sites, redes sociais, entre outros, as empresas buscam resolver problemas e
+                    chegar até o desejo dos consumidores. A partir de estratégias diversas, como a definição de
+                    público-alvo, o uso de uma linguagem certeira e de uma estratégia apropriada, alcança-se a persona
+                    procurada. Assim, é possível reverter o trabalho em resultados, com a venda de algum produto ou a
+                    difusão de uma ideia, por exemplo.</p>
+                <p>Neste post, mostraremos como o tem exigido profissionais com conhecimento e formação em marketing
+                    digital
+                    e as oportunidades existentes para quem quer se especializar nesta área. Vamos nessa?</p>
+                <h2>Fatos sobre o mercado do marketing digital</h2>
+                <p>O marketing cresceu e cresce ano a ano. O motivo disso é claro: o acesso à internet já faz parte da
+                    vida
+                    de mais da metade da população mundial. Por esse motivo, o marketing tradicional precisou se
+                    atualizar</a> e chegar às redes, atraindo os consumidores a partir de novas estratégias.</p>
+                <p>A internet e a tecnologia vieram para ficar e revolucionar a maneira de se comprar e vender. Segundo
+                    o
+                    IBGE, mais de80% das casas brasileiras</a> contam com, ao menos, um aparelho celular com internet.
+                    Conheça, a seguir, algumas inovações do marketing digital:</p>
+                <h3>Expansão da publicidade mobile</h3>
+                <p>Mais do que nunca é preciso pensar no marketing voltado aos usuários de smartphones, que buscam em
+                    poucos
+                    cliques realizar desejos e atender necessidades. Pensando nisso, é fundamental construir páginas,
+                    blogs
+                    e sites com formatos adequados para celulares e que permitam uma fácil navegação.</p>
+                <p>O investimento no marketing é uma necessidade das empresas, que estão se adaptando a essa nova
+                    realidade
+                    e, consequentemente, buscando profissionais capacitados para revolucionar os negócios que ainda não
+                    estão incluídos nesse formato. Só dessa forma é possível sobreviver à concorrência do mercado.</p>
+                <h3>Funções do e-mail marketing</h3>
+                <p>O e-mail marketing</a> é uma das melhores maneiras de chegar ao público pretendido de forma certeira,
+                    com
+                    a mensagem correta e no momento esperado. Assim como o uso dos smartphones é uma realidade mundial,
+                    as
+                    contas de e-mail também são frequentemente utilizadas.</p>
+                <p>Por meio do e-mail marketing empresas e consumidores se comunicam com facilidade e de forma pessoal e
+                    direta. É uma ferramenta que permite grande alcance e que opera de forma previsível, uma vez que, ao
+                    selecionar endereços de e-mail, a pessoa certamente o receberá, diferentemente do que ocorre em
+                    anúncios
+                    nas redes sociais, por exemplo.</p>
+                <p>Essa também não é uma ação que demanda grande investimento financeiro, e, mesmo assim, pode garantir
+                    um
+                    bom retorno.</p>
+                <h3>Vantagens dos mecanismos de buscas</h3>
+                <p>Colocar sua empresa entre as primeiras encontradas durante a busca por um produto ou serviço na
+                    internet
+                    é sinal de que o trabalho de marketing digital </a>está sendo desenvolvido corretamente. Sabe por
+                    quê? A
+                    maioria dos usuários de internet acessam os primeiros resultados mostrados dos buscadores de
+                    informações, tal qual o <a
+                            href="http://www.impacta.com.br/blog/2015/05/05/conheca-mais-sobre-o-google-e-a-importancia-do-seo/"
+                            target="_blank" rel="noopener">Google</a>.</p>
+                <p>Ou seja, aparecendo entre os primeiros resultados da busca, as chances de um possível cliente entrar
+                    na
+                    sua página e, consequentemente, adquirir um produto é muito maior.</p>
+                <p>Assim, saber trabalhar corretamente o marketing digital com os mecanismos de buscas significa estar
+                    dentro dos padrões determinados para alavancar a sua empresa. Para isso, é importante estar bem
+                    informado e ter a melhor formação, com conhecimentos abrangentes sobre o que faz uma página ser ou
+                    não
+                    ranqueada pelo Google, por exemplo.</p>
+                <h3>Relevância das redes sociais</h3>
+                <p>Facebook, Instagram, LinkedIn, Twitter. Todo mundo já ouviu falar dessas redes sociais, mas talvez
+                    ainda
+                    não tenha consciência do tamanho da importância das mesmas para o marketing digital.</p>
+                <p>Todas elas são espaços de comunicação entre as pessoas, apesar de funcionarem de formas distintas e
+                    de
+                    cada uma ter um objetivo específico. Criar linguagens apropriadas, perfis de empresas bem
+                    alimentados e
+                    definir públicos-alvo podem ser ações essenciais para alavancar sua empresa na internet.</p>
+                <p>Uma única curtida ou compartilhamento permite uma expansão significativa no número de pessoas
+                    atingidas
+                    por determinada mensagem. Mas, trabalhar com essas redes requer preparo e conhecimentos</a>
+                    próprios para
+                    que tudo saia como planejado.</p>
+                <h3>Marketing digital e os aplicativos</h3>
+                <p>Empresas do mundo todo utilizam aplicativos de celular</a> para aumentar vendas e garantir a
+                    fidelização
+                    de seus clientes. Planejar o marketing digital inclui trabalhar para que seus aplicativos sejam
+                    baixados
+                    nos celulares e, consequentemente, sejam usados por seus clientes.</p>
+                <p>Também é fundamental utilizar estratégias para chamar a atenção do usuário para o aplicativo
+                    instalado,
+                    sem que ele fique ocioso e apenas tomando espaço da memória do smartphone. Fazer do aplicativo um
+                    canal
+                    permanente de interação entre empresa e cliente é sucesso garantido nos negócios.</p>
+                <h2>Curso de marketing digital: saiba como entrar no mercado</h2>
+                <p>Alavancar a carreira, ganhar mais dinheiro e obter sucesso é a intenção de muitas pessoas. No
+                    entanto,
+                    para que isso aconteça de forma rápida e objetiva, é preciso definir alguns passos.</p>
+                <p>O principal caminho é buscar uma formação adequada e específica que, diretamente, signifique um
+                    diferencial no mercado de trabalho. Elaborar um como investir em você</a> são pontos essenciais para
+                    o
+                    seu sucesso.</p>
+                <p>O mercado de marketing digital está entre as áreas mais promissoras atualmente. E curso
+                    específico</a> é
+                    uma alternativa para ampliar seus conhecimentos em determinadas áreas do marketing digital, podendo
+                    optar por aquelas que você queira conhecer mais a fundo e que acredite ter importância para a sua
+                    carreira.</p>
+                <p>Agora que você conheceu melhor os motivos de se fazer um curso de marketing digital, já pode entrar
+                    em
+                    contato com a gente e conhecer as opções de graduação e pós-graduação oferecidas. Basta
+                    acessar nossa
+                    página</a> e trilhar ainda mais seu caminho de sucesso!</p>
+            </div>
+        </section>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

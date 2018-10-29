@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/noticias.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Engenharia de Software</h2>
+        <p class="text1"> Autor: Rogério Ramalho 12/09/2018</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <h2>Engenharia de Software: 5 motivos para fazer uma pós nessa área</h2>
+                <p>Dados da Associação Brasileira das Empresas de Software (Abes)</a> mostram que, em 2017, o Brasil
+                    cresceu
+                    4,5% no mercado de hardwares, softwares e de serviços de Tecnologia de Informação (TI). Um
+                    crescimento
+                    que representa uma grande oportunidade para quem atua na área de engenharia de software.</p>
+                <p>Por isso, para quem já trabalha com a área de tecnologia, mas deseja alavancar a sua carreira,
+                    procurar
+                    um curso de pós-graduação em engenharia de software é a melhor alternativa. A área está crescendo
+                    cada
+                    vez mais e necessita das melhores qualidades desse profissional da tecnologia.</p>
+                <p>Além de oferecer uma boa remuneração para quem tem essa especialização, o mercado está cheio de
+                    oportunidades de atuação em empresas de todos os portes. Neste artigo, vamos apresentar 5 motivos
+                    para
+                    você fazer uma pós nessa área e sair na frente da concorrência. Confira!</p>
+                <h2>1. Vivemos uma era tecnológica</h2>
+                <p>A tecnologia só tende a avançar cada vez mais no mundo contemporâneo. Mas como acompanhar esses
+                    avanços?
+                    Sem dúvidas, não é uma tarefa fácil, mas pode ser muito recompensadora.</p>
+                <p>É assim que trabalha um especialista em engenharia de software: antenado nas novidades tecnológicas,
+                    criando e inovando tendências. O profissional dessa área está sempre em busca de novos métodos de
+                    desenvolvimento e gerenciamento de sistemas e aplicativos.</p>
+                <p>Com o curso de pós-graduação</a>, você aprende a encontrar sempre as melhores formas de viver a era
+                    tecnológica, já que o desenvolvimento desses sistemas tem como objetivo aumentar a produtividade e o
+                    desempenho de todos os setores da sociedade.</p>
+                <h2>2. Mercado tecnológico em crescimento</h2>
+                <p>Atualmente, segundo dados do último levantamento da Abes, o Brasil é o nono no ranking mundial de
+                    desenvolvedores, fabricantes e distribuidores de softwares. O País investiu cerca de US$ 38
+                    bilhões</a>
+                     em hardwares, softwares e serviços de TI durante o ano de 2017. Com esse montante de investimento,
+                    ficamos em primeiro lugar no ranking latino-americano!</p>
+                <p>Esse cenário mostra um setor aquecido para os engenheiros. Com pós-graduação na área</a>, é possível
+                    aprender a acompanhar as inovações, tendo adquirido o conhecimento das melhores técnicas e modelos a
+                    serem seguidos.</p>
+                <p>Internacionalmente, os setores de tecnologia também estão em alta. Lá fora, o crescimento foi de 5,5%
+                    em
+                    2017. Assim, podemos constatar que a demanda internacional por esse profissional também é grande.
+                    Com a
+                    especialização adequada, você pode concorrer a essas vagas (vale lembrar da importância de ter um
+                    bom
+                    domínio da língua inglesa).</p>
+                <h2>3. Faltam profissionais qualificados</h2>
+                <p>Os engenheiros de softwares são responsáveis por criar plataformas digitais, jogos, aplicativos e
+                    sistemas específicos. Nesse sentido, a pós-graduação capacita ainda mais o profissional para a
+                    utilização de teorias, técnicas e ferramentas para a produção e desenvolvimento de sistemas.</p>
+                <p>Em contrapartida do crescimento do mercado de TI, há uma grande falta de profissionais capacitados.
+                    Em um
+                    outro estudo, a Associação para a Promoção da Excelência do Software (Softex)</a> mostra que, em
+                    2020, o
+                    Brasil tende a ter carência de mais de 400 mil profissionais de tecnologia da informação. O
+                    engenheiro
+                    de software está entre esses profissionais que estarão em falta. Por isso, percebe a
+                    grande oportunidade?</p>
+                <p>Outra informação que pode ser encontrada nesses relatórios é que a falta de especialização e prática
+                    de
+                    muitos profissionais formados na área produziu gerações de desenvolvedores inseguros, com capacidade
+                    restrita de produzir resultados concretos e de qualidade.</p>
+                <p>Lamentavelmente, as avaliações técnicas em processos seletivos confirmam essa tese. Os conhecimentos
+                    teóricos de muitos candidatos são fragmentados e falhos devido à ausência experiências práticas. A
+                    boa
+                    notícia é que esse &ldquo;gap&rdquo; pode ser superado com um bom curso de pós-graduação.</p>
+                <h2>4. Ampla oportunidade de atuação</h2>
+                <p>Vamos pensar nos vários aplicativos que utilizamos no nosso dia a dia. Não importa o segmento,
+                    certamente
+                    um engenheiro de software fez parte do projeto de desenvolvimento. Com isso, já é possível imaginar
+                    o tamanho do mercado de atuação para esse profissional</a>, especialmente para aqueles com alguma
+                    especialização.</p>
+                <p>Criação de aplicativos, jogos, plataformas digitais para atividades educacionais, sistemas embarcados
+                    e
+                    sistemas específicos, desenvolvimento de programas, manutenção e adequação de diferentes processos
+                    produtivos. Todas essas são opções para esse profissional, além de cuidar de toda a parte técnica e
+                    científica dos sistemas, desde o desenvolvimento até a gestão.</p>
+                <p>Para se destacar ainda mais, o ideal é que o engenheiro de software esteja sempre por dentro das
+                    tendências do setor. Com essa prática, ele pode produzir sistemas de software cada vez mais
+                    eficientes.
+                    Um dos caminhos mais promissores é a pós-graduação na área. Quanto mais conhecimento você tiver,
+                    melhor
+                    será para alcançar o sucesso na sua carreira.</p>
+                <p>Além disso, a média salarial de um engenheiro de software é de R$ 4,6 mil. Mas a remuneração pode
+                    chegar
+                    a R$ 22 mil, como é o caso de profissionais seniores da área.</p>
+                <h2>5. Pós-graduação em engenharia de software como a chave do sucesso</h2>
+                <p>Se pretende mergulhar nessa área e alcançar a posição de um sênior, busque desenvolver as habilidades
+                    e
+                    competências desejadas pelo mercado. Para isso, investir em uma boa pós-graduação em Engenharia de
+                    Software pode ajudar nessa tarefa. Ao escolher o curso certo, dedicar-se e manter-se informado, é
+                    possível se preparar bem para conquistar uma dessas vagas e impulsionar a carreira.</p>
+                <p>A pós-graduação lato sensu em engenharia de software</a> da Faculdade Impacta, por exemplo, foi
+                    elaborada para atender as necessidades de profissionais que já atuam no mercado de tecnologia da
+                    informação e estão diretamente envolvidos com o processo de engenharia de software.</p>
+                <p>O objetivo é atender as exigências do mercado, promover um alinhamento estratégico entre tecnologia e
+                    negócio, além de buscar integrar os resultados obtidos na análise e projeto com a fase de
+                    desenvolvimento de software. Os estudantes da pós são imersos em um ambiente focado no pensamento
+                    ágil,
+                    atendendo às necessidades do mercado de trabalho.</p>
+                <p>Nesse contexto, a troca de experiências entre alunos e professores, assim como a experiência com
+                    casos
+                    reais e clientes reais são potencializadas. Portanto, pode ter certeza de que, ao cursar uma pós
+                    em engenharia de software, a sua carreira tem tudo para dar certo.</p>
+                <p>Gostou do conteúdo? Ficou interessado em investir em uma pós nessa área? Entre em contato conosco</a>
+                     para investir com sabedoria na sua carreira!</p>
+            </div>
+        </section>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

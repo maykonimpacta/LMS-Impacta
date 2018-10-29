@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.fa-chevron-up {
+    position: fixed;
+    right: 30px;
+    bottom: 15px;
+    color: #fff;
+    background-color: #fd9b00;
+    padding: 25px;
+    border-radius: 50%;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+}
+
+.link-saiba-mais {
+    font-size: 12px;
+
+}
+
+.logo {
+    background-image: url("../images/logohead.png");
+    width: 45%;
+    height: 45%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: top;
+}
+
+.abaixo-logo {
+    margin-top: 300px;
+}
+
+.navigation {
+    min-width: 100%;
+    height: 40vh;
+    background-image: url("../images/wallpaper-desktop-00.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.work {
+    min-width: 100%;
+    height: 45vh;
+    background-image: url("../images/wallpaper-desktop-00.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navigation nav {
+    width: 100%;
+    height: 30%;
+    margin-left: -30%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 38px;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1.2em;
+}
+
+nav ul li a {
+    padding: 1.2em;
+}
+
+.navigation h1 span {
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.navigation h1 {
+    margin: 10% 0 25px 0;
+    font-size: 1.8em;
+    color: #ededed;
+}
+
+.navigation p {
+    text-align: center;
+    font-size: .85em;
+    line-height: 1.5em;
+    color: #ededed;
+}
+
+.navigation .sobre {
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: 15px 50px;
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    margin: 4% auto 0 auto;
+    display: block;
+}
+
+.diferencial {
+    min-width: 100%;
+    height: 400px;
+    margin: 50px auto 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.diferencial .box {
+    width: 180px;
+    height: 250px;
+    margin: 0;
+    padding: .8em;
+}
+
+.diferencial .div1 {
+    background-color: #162836
+}
+
+.diferencial .div2 {
+    background-color: #152430;
+}
+
+.diferencial .div3 {
+    background-color: #162836;
+}
+
+.diferencial .div4 {
+    background-color: #152430;
+}
+
+.diferencial .div5 {
+    background-color: #162836;
+}
+
+.box .icon {
+    display: block;
+    margin: 30px auto 0 auto;
+    background-color: rgba(255, 255, 255, .2);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0);
+    -webkit-transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+}
+
+.box:hover .icon {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, .6);
+}
+
+.box .img1 {
+    background-image: url("../images/monitor.png");
+}
+
+.box .img2 {
+    background-image: url("../images/idea.png");
+}
+
+.box .img3 {
+    background-image: url("../images/code.png");
+}
+
+.box .img4 {
+    background-image: url("../images/gear.png");
+}
+
+.box .img5 {
+    background-image: url("../images/cloud.png");
+}
+
+.box > h3 {
+    color: #e5e5e5;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+.box > p {
+    display: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: .9em;
+}
+
+.box:hover p {
+    display: block;
+}
+
+.box:hover h3 {
+    display: none;
+}
+
+.services1, .services2 {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    background-color: #f7f7f7;
+}
+
+.imagem01, .imagem02, .imagem03, .imagem04 {
+    width: 50%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sobre {
+    margin-top: -10px;
+}
+
+.imagem01 {
+    background-image: url("../images/wallpaper-apple.jpg");
+}
+
+.imagem02 {
+    background-image: url("../images/wallpaper-desktop-02.jpg");
+}
+
+.imagem03 {
+    background-image: url("../images/wallpaper-visao.jpg");
+}
+
+.imagem04 {
+    background-image: url("../images/wallpaper-valoes.jpg");
+}
+
+.software, .apps {
+    width: 30%;
+    height: 400px;
+    margin: 50px 10% 0 10%;
+}
+
+button {
+    border: none;
+    background-color: #fd9b00;
+    padding: 10px 20px;
+    display: block;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #252525;
+}
+
+footer .fa {
+    font-size: 1.5em;
+    color: #fd9b00;
+    padding: 10px;
+    position: relative;
+    top: -32px;
+    left: 100px;
+}
+
+footer .fa:hover {
+    color: #ffbb4e;
+}
+
+footer > p {
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+}
+
+.software > button {
+    margin: 30px 0px;
+}
+
+.apps > button {
+    margin: 30px 0 0 75%;
+}
+
+.software > h3 {
+    text-align: left;
+}
+
+.apps > h3 {
+    text-align: right;
+}
+
+.titulo {
+    margin-top: -20px;
+}
+
+.apps > p {
+    text-align: right;
+}
+
+p {
+    color: #000000;
+    font-size: .9em;
+}
+
+h3 {
+    color: #000000;
+    font-size: 1.15em;
+}
+
+h2 {
+    margin-top: 4%;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+h1 {
+    margin-top: -4%;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.text {
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.5em
+}
+
+.homeBT {
+    color: #ffffff;
+}
+
+.homeBT:hover {
+    color: #fd9b00;
+}
+
+.sobreBT {
+    color: #ffffff;
+}
+
+.sobreBT:hover {
+    color: #fd9b00;
+}
+
+.BT3 {
+    color: #ffffff;
+}
+
+.BT3:hover {
+    color: #fd9b00;
+}
+
+.BT4 {
+    color: #ffffff;
+}
+
+.BT4:hover {
+    color: #fd9b00;
+}
+
+.BT5 {
+    color: #ffffff;
+}
+
+.BT5:hover {
+    color: #fd9b00;
+}
+
+.BT6 {
+    color: #ffffff;
+}
+
+.BT6:hover {
+    color: #fd9b00;
+}
+
+p.fim {
+    color: #ffffff;
+}

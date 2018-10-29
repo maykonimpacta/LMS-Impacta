@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/noticias3.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="BT3" href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a class="BT4" href="{% url 'noticias' %}">Noticias</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="BT4" href="{% url 'logout' %}">Sejá bem vindo {{ user.username }} (sair)</a></li>
+                    {% else %}
+                        <li><a class="BT4" href="{% url 'login' %}">Acesso Restrito</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Conheça os 9 melhores filmes sobre tecnologia</h2>
+        <p class="text1"> Autor: Rogério Ramalho 24/08/2018</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <p>A tecnologia está presente em tudo e, claro, também no. Quem planeja a carreira pensando em trabalhar
+                    no
+                    setor e ao mesmo tempo gosta de maratonar filmes e séries pode aliar o prazer ao conhecimento. Sabe
+                    como? É possível se informar melhor sobre a área usando como inspiração filmes sobre tecnologia.</p>
+                <p>A  sempre esteve presente nas histórias produzidas em Hollywood e muitos filmes acabaram virando um
+                    sucesso entre os telespectadores. A primeira película que abordou o tema nas telinhas, &ldquo;Viagem
+                    à Lua&rdquo;, já tem mais de cem anos desde a sua produção e ainda é lembrada pela capacidade de
+                    retratar a viagem do homem a lua, fato considerado impossível para a época.</p>
+                <p>A partir daí, diversas outras produções abordaram essa temática e passaram a discutir o impacto da
+                    tecnologia na sociedade. E por conta disso, neste post, mostraremos nove exemplos de longas
+                    metragens,
+                    clássicos ou modernos, em que a tecnologia é a temática central.</p>
+                <p>Alguns desses filmes contam ainda a história de  tecnologia atual e os caminhos por eles trilhados
+                    para
+                    liderarem o mercado no setor. Se você se interessa pelo tema e busca conhecer ainda mais sobre a
+                    área,
+                    venha com a gente mergulhar neste assunto!</p>
+                <h2>1. 2001 – Uma Odisseia no Espaço</h2>
+                <p>Em 1968, a ideia de Stanley Kubrick foi lançar um filme prevendo a tecnologia que seria uma realidade
+                    em
+                    2001. Com a ajuda de empresas, ele reuniu algumas ideias e as incluiu no clássico &ldquo;2001 – Uma
+                    Odisseia no Espaço&rdquo;.</p>
+                <p>Nem tudo que é mostrado na produção virou realidade, mas as viagens interplanetárias tripuladas e a
+                    inteligência artificial foram grandes acertos. Não por acaso temos hoje sistemas como a Siri, que
+                    permite a interação direta entre o homem e a tecnologia. O filme é marcado pelos efeitos visuais e
+                    por
+                    um grande realismo científico.</p>
+                <h2>2. Jobs</h2>
+                <p>Mais recente na lista de filmes sobre tecnologia está &ldquo;Jobs&rdquo;. Lançado em 2013, ele conta
+                    a
+                    história de Steve Jobs, fundador da Apple e um dos principais líderes do setor da tecnologia. O
+                    filme
+                    retrata as dificuldades vividas pelo empresário para chegar ao topo do setor.</p>
+                <p>O longa mostra ainda que planejamento de carreira e sucesso profissional</a> foram fundamentais para
+                    Jobs
+                    chegar aonde chegou, uma vez que ele definiu seus objetivos e traçou suas metas para
+                    alcançá-los.</p>
+                <h2>3. Os Estagiários</h2>
+                <p>Apesar de ser uma comédia, &ldquo;Os estagiários&rdquo; retrata o ambiente e desafios do Google, uma
+                    das
+                    maiores empresas de tecnologia do mundo e sonho de trabalho de muitos jovens apaixonados pela
+                    temática.</p>
+                <p>Com bom humor, a película retrata a rotina de profissionais da área e a liderança da empresa no
+                    cenário
+                    mundial, produção indispensável para quem procura seu espaço nesse mercado de trabalho.</p>
+                <h2>4. Transcendence: A Revolução</h2>
+                <p>Também focado na temática sobre inteligência artificial, o filme &ldquo;Transcendence: A Revolução&rdquo;
+                    retrata a construção de uma máquina consciente que reúne informações sobre todo tipo de conteúdo com
+                    a
+                    grande variedade de emoções humanas, enquanto a sociedade teme e critica os inventos
+                    tecnológicos.</p>
+                <p>A história abre discussão para a relação entre as máquinas e a consciência, discutindo o poder da
+                    tecnologia na vida humana. Uma pessoa capaz de &ldquo;entrar&rdquo; ou habitar um computador se
+                    tornaria
+                    alguém mais poderoso por isso? Seria um novo Deus?</p>
+                <h2>5. Minority Report</h2>
+                <p>Um dos mais famosos dentro da temática tecnológica, &ldquo;Minority Report&rdquo; se passa no futuro,
+                    em
+                    2054. Assim como em &ldquo;2001 – Uma Odisseia no Espaço&rdquo;, o filme dirigido por Steven
+                    Spielberg
+                    também buscou informações e dados com empresas do setor de tecnologia, entre eles engenheiros do
+                    MIT,
+                    buscando fazer uma previsão acertada da tecnologia do futuro.</p>
+                <p>Na trama, um sistema possibilita que eventuais crimes sejam previstos, eliminando-os da sociedade. No
+                    entanto, o protagonista do filme, estrelado por Tom Cruise, descobre que um assassinato foi previsto
+                    e
+                    que ele mesmo será o autor, o que coloca em debate a funcionalidade de todo o sistema.</p>
+                <h2>6. Jogos de Guerra</h2>
+                <p>Produzido durante a Guerra Fria, o filme &rdquo;Jogos de Guerra&rdquo; conta a história de um garoto
+                    que
+                    acessa o sistema de dados do exército dos Estados Unidos e, despropositadamente, inicia um simulador
+                    de
+                    guerra termonuclear como se fosse apenas um jogo de computador. A ação do garoto coloca o mundo em
+                    uma
+                    espécie de Guerra Mundial, o que gera todo o suspense em torno de uma quase extinção humana.</p>
+                <p>Atualmente, a segurança das redes de tecnologia é uma preocupação das empresas que atuam nesse setor.
+                    Não
+                    por acaso, existem cursos que preparam o profissional</a> para atuar nesse mercado tão exigente.</p>
+                <h2>7. A Rede Social</h2>
+                <p>Lançado em 2010, &ldquo;A Rede Social&rdquo; conta a história de uma das maiores redes sociais da
+                    atualidade, o Facebook, e consequentemente relata a trajetória de seu criador, Mark Zuckerberg.</p>
+                <p>A história é, na verdade, uma biografia de Zuckerberg, mas é por meio dela que se entende a
+                    grandiosidade
+                    dessa rede social e as dificuldades enfrentadas para se chegar ao topo de uma rede tão concorrida
+                    como a
+                    internet. A formação aprofundada, as habilidades profissionais</a> e um plano de carreira</a>foram
+                    fundamentais para o fundador do Facebook chegar aonde chegou.</p>
+                <p>O filme ganhou alguns Oscars e foi considerado um dos melhores filmes do ano.</p>
+                <h2>8. Blade Runner</h2>
+                <p>Clássico entre os filmes sobre tecnologia, &ldquo;Blade Runner, o Caçador de Andróides&rdquo;,
+                    lançado em
+                    1982, conta a história de Rick Deckard, um caçador de robôs do futuro — androides praticamente
+                    idênticos
+                    aos humanos. A história se passa em Los Angeles e retrata um futuro agora quase presente, 2019.</p>
+                <p>A tecnologia é sempre retratada ao longo do filme, seja com carros tecnológicos que chegam a voar ou
+                    com
+                    grandes painéis neon, fazendo um paralelo com um futuro brilhante, mas não tão real devido aos
+                    robôs.</p>
+                <h2>9. Matrix</h2>
+                <p>Em &ldquo;Matrix&rdquo;, as máquinas se revoltam e acabam dominando a humanidade. A história se passa
+                    em
+                    um mundo em que os humanos vivem uma realidade que, na verdade, é irreal. Nela, um programador tem
+                    pesadelos e sonha que está conectado a um computador futurista.</p>
+                <p>Com a repetição desses sonhos, ele questiona a realidade e descobre que um sistema, chamado Matrix,
+                    manipula o pensamento da humanidade e a ilude, criando um falso mundo real. O protagonista, vivido
+                    pelo
+                    ator Keanu Reeves, seria o único capaz de enfrentar essa poderosa máquina e libertar as pessoas.</p>
+                <p>A tecnologia está tão presente na atualidade que há anos o cinema não deixa passar despercebido essa
+                    temática em suas produções. Melhor do que poder conhecer mais sobre os adventos tecnológicos e,
+                    assim,
+                    se inteirar sobre o mercado de trabalho, é fazer isso assistindo a filmes sobre tecnologia e se
+                    inspirar
+                    para atuar nesse setor</a>.</p>
+                <p>Agora que você já fez a sua lista de filmes sobre tecnologia, compartilhe este artigo nas suas redes
+                    sociais e divida esse conhecimento com seus amigos que também se interessam por esse tema!</p>
+            </div>
+        </section>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}

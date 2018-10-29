@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Faculdade FMJ de Tecnologia{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/diciplina4.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container">
+        <a href="#"><i class="fa fa-chevron-up " aria-hidden="true"></i></a>
+        <header class="navigation"> <!-- top navigation -->
+            <nav>
+                <ul>
+                    <li><a class="homeBT" href="index.html">Home</a></li>
+                    <li><a class="BT3" href="cursos.html">Cursos</a></li>
+                    <li><a class="BT4" href="noticias.html">Noticias</a></li>
+                </ul>
+            </nav>
+            <div class="logo"></div>
+        </header>
+        <h2>Gestão da Tecnologia da Informação</h2>
+        <p class="text1"> ERP & Gestão e Qualidade</p>
+        <section class="sv1"> <!-- Div da noticia -->
+            <div class="imagem01"></div>
+            <div class="software">
+                <h2>SOBRE O CURSO</h2>
+                <p>A graduação em Gestão da Tecnologia da Informação prepara você para a liderança em TI. Apto a criar
+                    soluções para problemas nas organizações, você vai fazer a administração de infraestrutura física e
+                    lógica de ambientes informatizados.</p>
+                <p>O curso aborda técnicas precisas que servem para executar sistemas informatizados de forma segura
+                    para os
+                    negócios através do gerenciamento de recursos de tecnologia nas organizações, entre elas software,
+                    redes
+                    de computadores, bancos de dados e ferramentas para segurança da informação.</p>
+                <p>Além disso, você vai aprender a fazer a gestão de pessoas, a elaborar planos de negócios sobre TI e
+                    gerir
+                    projetos para garantir os acordos de nível de serviços (SLA).</p>
+                <a href="{% url 'diciplina_gestti' %}">
+                    <button>Conheça as diciplinas</button>
+                </a>
+            </div>
+        </section>
+        <br/>
+        <footer>
+            <p class="fim">FMJ &copy; All Rights Reserved</p>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+        </footer>
+    </div> <!-- container -->
+    </body>
+{% endblock %}
